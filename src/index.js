@@ -1,17 +1,17 @@
 import Vue from "vue";
-import VueProjectTemplate from "./components/vue-project-template.vue";
+import PrimeFactorsWidget from "./components/prime-factors-widget.vue";
 
-let NODE_ENV = env["NODE_ENV"];
+const myWorker = new Worker("/js/get-factor-worker.js");
 
 new Vue({
-    el : "#vue-project-template",
+    el : "#factor-primes",
     components : {
-        VueProjectTemplate
+        PrimeFactorsWidget
     },
     render : function (createElement) {
-        return createElement(VueProjectTemplate, {
+        return createElement(PrimeFactorsWidget, {
             props : {
-                ENVIRONMENT : NODE_ENV
+                worker : myWorker
             }
         });
     }

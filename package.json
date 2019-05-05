@@ -7,6 +7,7 @@
     "test": "jest",
     "build": "webpack",
     "dev": "cross-env NODE_ENV=development webpack && yarn start",
+    "prod": "cross-env NODE_ENV=production webpack && yarn start",
     "local": "cross-env NODE_ENV=local webpack-dev-server --hot --inline",
     "start": "node app.js"
   },
