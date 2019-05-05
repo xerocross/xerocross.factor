@@ -3,7 +3,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const webpack = require('webpack')
 module.exports = {
     entry : {
-        'index' : './src/index.js'
+        'factor-primes' : './src/index.js'
     },
     output : {
         path : path.resolve(__dirname, './dist'),
@@ -46,7 +46,7 @@ module.exports = {
         ]
     },
     optimization : {
-        minimize : false
+        minimize : true
     },
     plugins : [
         new webpack.DefinePlugin({
