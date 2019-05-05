@@ -37,6 +37,30 @@ test("primary number input exists", () => {
     expect(numInput.exists()).toBe(true);
 });
 
+test("negative integer invalid", () => {
+    Worker = null;
+    let primeFactorsWidget = shallowMount(PrimeFactorsWidget);
+    let numInput = getPrimaryNumberInput(primeFactorsWidget);
+    numInput.setValue("-2");
+    expect(primeFactorsWidget.vm.invalidInput).toBe(false);
+});
+
+test("decimal input invalid", () => {
+    Worker = null;
+    let primeFactorsWidget = shallowMount(PrimeFactorsWidget);
+    let numInput = getPrimaryNumberInput(primeFactorsWidget);
+    numInput.setValue("2.3");
+    expect(primeFactorsWidget.vm.invalidInput).toBe(false);
+});
+
+test("non-numeric input invalid", () => {
+    Worker = null;
+    let primeFactorsWidget = shallowMount(PrimeFactorsWidget);
+    let numInput = getPrimaryNumberInput(primeFactorsWidget);
+    numInput.setValue("2a");
+    expect(primeFactorsWidget.vm.invalidInput).toBe(false);
+});
+
 test("initial input value is '0'", () => {
     let primeFactorsWidget = shallowMount(PrimeFactorsWidget);
     let numInput = getPrimaryNumberInput(primeFactorsWidget);

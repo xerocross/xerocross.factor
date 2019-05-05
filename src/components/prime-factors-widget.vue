@@ -58,7 +58,7 @@ Decimal.set({precision : 64});
 export default {
     props : {
         worker : {
-            type : Worker,
+            type : Object,
             default : () => {
                 return null;
             }
