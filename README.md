@@ -2,7 +2,9 @@
 
 A little Vue widget for computing the prime factors of an integer.  If a web worker is available, computation is offloaded to the worker.
 
-This project has **not been maintained**, and its dev environment `yarn install` will no longer install on a modern computer platform (at least not mine). If and when I update this project, I'll change this README to reflect that.
+This project has **not been maintained**, and its dev environment `yarn install` will no longer install on a modern computer platform (at least not mine). This app is **deprecated** in favor of Xero-Factor-2, described below.
+
+I wrote a complete rebuild of this app on modern technology. I consider it version 2 of this app, but I also renamed it to Xero-Factor-2, located at https://github.com/xerocross/xero-factor-2.
 
 ## Technology
 
